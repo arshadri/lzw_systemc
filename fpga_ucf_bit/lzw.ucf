@@ -1,0 +1,30 @@
+# Clock and RESET
+#------------------------------------------------------------------------------
+NET "clk66"           LOC = "AD13";             # 66.6666 MHz Osc
+NET "rst"           LOC = "H14";              # Reset: Switch SW2
+NET "clk_rst1/clk1"
+TNM_NET = "clk_rst1/clk1";
+TIMESPEC "TS_clk" = PERIOD "clk_rst1/clk1" 30ns HIGH 50%;
+
+
+#------------------------------------------------------------------------------
+NET "rx"            LOC = "P4";               # RS-232 RXD pin
+NET "tx"            LOC = "P5";               # RS-232 TXD pin
+NET "init_cr"       LOC = "U4";               # LED0
+NET "done_cr"       LOC = "W4";               # LED1
+NET "ser_recv_done" LOC = "V6";               # LED2
+NET "init_lzw"      LOC = "W7";               # LED3
+NET "lzw_done"      LOC = "T8";               # LED4
+NET "final_done"    LOC = "T7";               # LED5
+NET "pwr_up"        LOC = "T6";               # LED6
+NET "valid_start_deb"        LOC = "T5";               # LED7
+NET "rx"            IOSTANDARD = "LVTTL";     # RS-232 RXD pin
+NET "tx"            IOSTANDARD = "LVTTL";     # RS-232 TXD pin
+NET "init_cr"       IOSTANDARD = "LVTTL";     # LED0
+NET "done_cr"       IOSTANDARD = "LVTTL";     # LED1
+NET "ser_recv_done" IOSTANDARD = "LVTTL";     # LED2
+NET "init_lzw"      IOSTANDARD = "LVTTL";     # LED3
+NET "lzw_done"      IOSTANDARD = "LVTTL";     # LED4
+NET "final_done"    IOSTANDARD = "LVTTL";     # LED5
+NET "pwr_up"        IOSTANDARD = "LVTTL";     # LED6
+NET "valid_start_deb"      IOSTANDARD = "LVTTL";               # LED7
