@@ -1,6 +1,4 @@
-//*****************************************************************************
-// www.orahyn.com
-//*****************************************************************************
+
 
 This is an implemetation of an LZW encoder in SystemC which has been verified
 by implementing a test bench and requisite test vectors. Only those constructs
@@ -53,3 +51,5 @@ format.
 
 12) The fpga_ucf_bit folder contains the UCF file for FPGA implementation, as 
 well as the bit and mcs file 
+
+www.orahyn.com
