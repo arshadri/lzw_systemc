@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="LZW Encoder in SystemC : An implementation of LZW encoder in SystemC and verified in FPGA" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>LZW Encoder in SystemC</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/arshadri/lzw_systemc">View on GitHub</a>
+
+          <h1 id="project_title">LZW Encoder in SystemC</h1>
+          <h2 id="project_tagline">An implementation of LZW encoder in SystemC and verified in FPGA</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/arshadri/lzw_systemc/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/arshadri/lzw_systemc/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>This is an implemetation of an LZW encoder in SystemC which has been verified
+by implementing a test bench and requisite test vectors. Only those constructs
+of SystemC have been used which are synthesizabe abd recognized by the "SC2V"
+converter. It has than been converted to Verilog code by using the open source 
+"SC2V" program. The converted RTL is again verified in verilog simulations, and 
+then verified in a Xilinx FPGA. The Digilent Spartan3 system board was used to 
+verify the LZW code.</p>
+
+<h1>
+<a name="doc" class="anchor" href="#doc"><span class="octicon octicon-link"></span></a>DOC</h1>
+
+<p>The doc folder contains a document which describes the LZW implementation, 
+as well as the testbench implementation</p>
+
+<h1>
+<a name="systemc" class="anchor" href="#systemc"><span class="octicon octicon-link"></span></a>SystemC</h1>
+
+<p>The systemc folder contains the LZW implementation files in SystemC format. 
+This is synthesizable SystemC code.</p>
+
+<h1>
+<a name="systemc-models" class="anchor" href="#systemc-models"><span class="octicon octicon-link"></span></a>SystemC Models</h1>
+
+<p>The systemc_models folder contains the serial port, model used 
+in simulation, which is implemented in systemC </p>
+
+<h1>
+<a name="systemc-test-bench" class="anchor" href="#systemc-test-bench"><span class="octicon octicon-link"></span></a>SystemC Test Bench</h1>
+
+<p>The systemc_tb folder contains the testbench for simulation in SystemC 
+format.</p>
+
+<h1>
+<a name="converted-verilog-rtl" class="anchor" href="#converted-verilog-rtl"><span class="octicon octicon-link"></span></a>Converted Verilog RTL</h1>
+
+<p>The converted_verilog_rtl folder contains the LZW rtl files, converted from 
+systemC using the SC2V open source converter. A C-Shell script "sc2v.sh" is 
+present to convert all SystemC synthesizable files to Verilog format.</p>
+
+<h1>
+<a name="verilog-models" class="anchor" href="#verilog-models"><span class="octicon octicon-link"></span></a>Verilog Models</h1>
+
+<p>The verilog_models folder contains the serial port model used in simulation. 
+The following RAM models can be obtained from Xilinx ISE web pack for 
+simulation purposes.
+RAMB4_S8.v<br>
+RAMB4_S8_S8.v
+RAMB16_S18.v 
+RAMB16_S18_S18.v</p>
+
+<h1>
+<a name="verilog-test-bench" class="anchor" href="#verilog-test-bench"><span class="octicon octicon-link"></span></a>Verilog Test Bench</h1>
+
+<p>The verilog_tb folder contains the testbench for simulation in verilog 
+format, for testing the converted code.</p>
+
+<h1>
+<a name="verilog-test-cases" class="anchor" href="#verilog-test-cases"><span class="octicon octicon-link"></span></a>Verilog Test Cases</h1>
+
+<p>The verilog_test_cases contains the test files used for RTL simulations</p>
+
+<h1>
+<a name="run" class="anchor" href="#run"><span class="octicon octicon-link"></span></a>Run</h1>
+
+<p>The run folder contains a sample "run.do" file to run the verilog 
+simulations in Modelsim</p>
+
+<h1>
+<a name="fpga-bit-files" class="anchor" href="#fpga-bit-files"><span class="octicon octicon-link"></span></a>FPGA Bit Files</h1>
+
+<p>The fpga_ucf_bit folder contains the UCF file for FPGA implementation, as 
+well as the bit and mcs file </p>
+
+<h1>
+<a name="fpga-test-files" class="anchor" href="#fpga-test-files"><span class="octicon octicon-link"></span></a>FPGA Test Files</h1>
+
+<p>The fpga_test_files folder contains the files which are downloaded into the
+FPGA for compressing, through "braypp" serial port program. This is freely
+available on the net.
+    input test files in1.txt, in2.txt, in3.txt</p>
+
+<p><a href="http://www.orahyn.com">www.orahyn.com</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">LZW Encoder in SystemC maintained by <a href="https://github.com/arshadri">arshadri</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
